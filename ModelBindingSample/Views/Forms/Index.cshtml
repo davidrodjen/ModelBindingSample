@@ -5,10 +5,23 @@
 
 <h1>HTML Forms Example</h1>
 
-<form>
+<form method="post">
     <label for="full-name">Full Name</label>
-    <input type="text" name="full-name" />
+    <input type="text" id="full-name" name="full-name" />
     <span>*</span>
 	<br />
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" />
+    <span>*</span>
+	<br />
+
+    <label for="fav-number">Favorite Number:</label>
+    <input type="text" id="fav-number" />
+    <span>*</span>
+	<br />
+
+    <input type="submit" value="Add Student"
+            class="btn btn-primary" />
 
 </form>
