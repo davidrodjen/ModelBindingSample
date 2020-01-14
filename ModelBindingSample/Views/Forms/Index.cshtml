@@ -5,23 +5,35 @@
 
 <h1>HTML Forms Example</h1>
 
-<form method="post">
-    <label for="full-name">Full Name</label>
-    <input type="text" id="full-name" name="full-name" />
-    <span>*</span>
-	<br />
+@if (ViewData["Message"] != null)
+{
+   <h2 class="alert alert-success">
+    @ViewData["Message"]
+   </h2> 
+}
+else 
+{ 
+    <form method="post">
+        <label for="full-name">Full Name</label>
+        <input type="text" id="full-name" name="full-name" />
+        <span>*</span>
+        <br />
 
-    <label for="dob">Date of Birth:</label>
-    <input type="date" id="dob" name="dob" />
-    <span>*</span>
-	<br />
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" />
+        <span>*</span>
+        <br />
 
-    <label for="fav-number">Favorite Number:</label>
-    <input type="text" id="fav-number" />
-    <span>*</span>
-	<br />
+        <label for="fav-number">Favorite Number:</label>
+        <input type="text" id="fav-number" />
+        <span>*</span>
+        <br />
 
-    <input type="submit" value="Add Student"
-            class="btn btn-primary" />
+        <input type="submit" value="Add Student"
+               class="btn btn-primary" />
 
-</form>
+    </form>
+
+}
+
+
